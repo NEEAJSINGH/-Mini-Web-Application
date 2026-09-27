@@ -1,0 +1,100 @@
+{
+  "summary": {
+    "totalUsers": 12480,
+    "activeUsers": 8920,
+    "orders": 1842,
+    "revenue": 128450
+  },
+  "monthlySales": [
+    {
+      "month": "Jan",
+      "sales": 18500
+    },
+    {
+      "month": "Feb",
+      "sales": 21200
+    },
+    {
+      "month": "Mar",
+      "sales": 19800
+    },
+    {
+      "month": "Apr",
+      "sales": 24600
+    },
+    {
+      "month": "May",
+      "sales": 28100
+    },
+    {
+      "month": "Jun",
+      "sales": 26250
+    }
+  ],
+  "activities": [
+    {
+      "id": 1,
+      "name": "Aarav Sharma",
+      "category": "Development",
+      "status": "Completed",
+      "amount": 18500,
+      "date": "2026-06-24"
+    },
+    {
+      "id": 2,
+      "name": "Priya Singh",
+      "category": "Design",
+      "status": "In Progress",
+      "amount": 12600,
+      "date": "2026-06-22"
+    },
+    {
+      "id": 3,
+      "name": "Rohan Joshi",
+      "category": "Marketing",
+      "status": "Pending",
+      "amount": 8400,
+      "date": "2026-06-20"
+    },
+    {
+      "id": 4,
+      "name": "Ananya Verma",
+      "category": "Development",
+      "status": "Completed",
+      "amount": 21400,
+      "date": "2026-06-18"
+    },
+    {
+      "id": 5,
+      "name": "Kabir Mehta",
+      "category": "Support",
+      "status": "Completed",
+      "amount": 9700,
+      "date": "2026-06-16"
+    },
+    {
+      "id": 6,
+      "name": "Neha Kapoor",
+      "category": "Design",
+      "status": "In Progress",
+      "amount": 15300,
+      "date": "2026-06-14"
+    },
+    {
+      "id": 7,
+      "name": "Vikram Rawat",
+      "category": "Marketing",
+      "status": "Pending",
+      "amount": 11200,
+      "date": "2026-06-12"
+    },
+    {
+      "id": 8,
+      "name": "Ishita Gupta",
+      "category": "Support",
+      "status": "Completed",
+      "amount": 7800,
+      "date": "2026-06-10"
+    }
+  ]
+}

@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Responsive accessible mini analytics dashboard using static JSON data.">
+  <title>PulseBoard - Mini Analytics Dashboard</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="app.js" defer></script>
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to main content</a>
+
+<header class="topbar">
+  <div class="container topbar-inner">
+    <a class="brand" href="#" aria-label="PulseBoard dashboard home">PulseBoard</a>
+    <button class="menu-btn" type="button" aria-expanded="false" aria-controls="main-nav" aria-label="Open navigation">
+      <span aria-hidden="true">☰</span>
+    </button>
+    <nav id="main-nav" aria-label="Primary navigation">
+      <a href="#overview">Overview</a>
+      <a href="#sales">Sales</a>
+      <a href="#activity">Activity</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main" class="container">
+  <section class="page-heading" id="overview" aria-labelledby="dashboard-title">
+    <div>
+      <p class="eyebrow">Final Project · Mini Web Application</p>
+      <h1 id="dashboard-title">Analytics Dashboard</h1>
+      <p>Track users, orders, revenue, monthly sales, and recent activity.</p>
+    </div>
+    <button class="refresh-btn" id="refreshBtn" type="button">Refresh data</button>
+  </section>
+
+  <div id="statusMessage" class="status" role="status" aria-live="polite">Loading dashboard data…</div>
+
+  <section class="stats-grid" aria-label="Key performance indicators">
+    <article class="stat-card">
+      <span class="stat-label">Total Users</span>
+      <strong id="totalUsers">—</strong>
+      <span class="stat-note">Registered accounts</span>
+    </article>
+    <article class="stat-card">
+      <span class="stat-label">Active Users</span>
+      <strong id="activeUsers">—</strong>
+      <span class="stat-note">Currently active</span>
+    </article>
+    <article class="stat-card">
+      <span class="stat-label">Orders</span>
+      <strong id="orders">—</strong>
+      <span class="stat-note">Completed and open</span>
+    </article>
+    <article class="stat-card">
+      <span class="stat-label">Revenue</span>
+      <strong id="revenue">—</strong>
+      <span class="stat-note">Total recorded</span>
+    </article>
+  </section>
+
+  <section class="panel" id="sales" aria-labelledby="sales-title">
+    <div class="panel-heading">
+      <div>
+        <p class="eyebrow">Performance</p>
+        <h2 id="sales-title">Monthly Sales</h2>
+      </div>
+      <label class="select-wrap">
+        <span>Chart view</span>
+        <select id="chartView" aria-label="Choose chart view">
+          <option value="bar">Bar chart</option>
+          <option value="table">Data table</option>
+        </select>
+      </label>
+    </div>
+    <div id="chartContainer" class="chart" role="img" aria-label="Monthly sales bar chart"></div>
+    <div id="salesTableContainer" class="table-wrap" hidden></div>
+  </section>
+
+  <section class="panel" id="activity" aria-labelledby="activity-title">
+    <div class="panel-heading">
+      <div>
+        <p class="eyebrow">Recent records</p>
+        <h2 id="activity-title">Activity</h2>
+      </div>
+      <div class="controls">
+        <label>
+          <span class="sr-only">Filter by status</span>
+          <select id="statusFilter">
+            <option value="All">All statuses</option>
+            <option value="Completed">Completed</option>
+            <option value="In Progress">In Progress</option>
+            <option value="Pending">Pending</option>
+          </select>
+        </label>
+        <label>
+          <span class="sr-only">Sort activity</span>
+          <select id="sortSelect">
+            <option value="date-desc">Newest first</option>
+            <option value="date-asc">Oldest first</option>
+            <option value="amount-desc">Highest amount</option>
+            <option value="amount-asc">Lowest amount</option>
+          </select>
+        </label>
+      </div>
+    </div>
+
+    <div id="activityTable" class="table-wrap"></div>
+  </section>
+</main>
+
+<footer>
+  <div class="container">
+    <p>PulseBoard · Final Mini Web Application Project</p>
+  </div>
+</footer>
+</body>
+</html>
